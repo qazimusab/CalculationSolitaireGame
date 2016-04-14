@@ -2,7 +2,7 @@ import random
 import sys
 
 
-class Stack:
+class CardStack:
     def __init__(self):
         self.items = []
 
@@ -87,7 +87,7 @@ def get_next_card(number):
 
 
 class ShuffledDeck:
-    __shuffled_deck = Stack()
+    __shuffled_deck = CardStack()
 
     def __init__(self):
         for i in range(0, 4):
@@ -132,10 +132,10 @@ class ShuffledDeck:
 
 
 class FoundationStacks:
-    __stack_plus_1 = Stack()
-    __stack_plus_2 = Stack()
-    __stack_plus_3 = Stack()
-    __stack_plus_4 = Stack()
+    __stack_plus_1 = CardStack()
+    __stack_plus_2 = CardStack()
+    __stack_plus_3 = CardStack()
+    __stack_plus_4 = CardStack()
 
     def __init__(self):
         ace = Card(get_suit(1), "A")
@@ -253,10 +253,10 @@ class FoundationStacks:
 
 
 class WastePiles:
-    __waste_stack_1 = Stack()
-    __waste_stack_2 = Stack()
-    __waste_stack_3 = Stack()
-    __waste_stack_4 = Stack()
+    __waste_stack_1 = CardStack()
+    __waste_stack_2 = CardStack()
+    __waste_stack_3 = CardStack()
+    __waste_stack_4 = CardStack()
 
     def __init__(self):
         pass
@@ -360,8 +360,8 @@ class WastePiles:
                and self.is_waste_pile_3_empty() and self.is_waste_pile_4_empty()
 
 
-class RevealStack:
-    __reveal_stack = Stack()
+class RevealedStack:
+    __reveal_stack = CardStack()
 
     def __init__(self):
         pass

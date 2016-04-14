@@ -1,13 +1,13 @@
 from objects import FoundationStacks
 from objects import WastePiles
-from objects import RevealStack
+from objects import RevealedStack
 from objects import ShuffledDeck
 
 
 def main():
     foundation_stacks = FoundationStacks()
     waste_piles = WastePiles()
-    reveal_stack = RevealStack()
+    reveal_stack = RevealedStack()
     shuffled_deck = ShuffledDeck()
     command = raw_input('Here are a list of commands to play the game: \n'
                         'F1 is Foundation Stack 1\n'
