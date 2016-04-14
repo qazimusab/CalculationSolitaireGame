@@ -29,15 +29,12 @@ class Stack:
         if self.size() > 0:
             all_cards = ""
             for i in range(len(self.items)):
-                card = self.items[i]
+                card = self.items[len(self.items) - 1 - i]
                 all_cards += "[" + card.get_number() + " of " + card.get_suit() + "] "
         print all_cards
 
 
 class Card:
-    __suit = ""
-    __number = ""
-
     def __init__(self, suit, number):
         self.__suit = suit
         self.__number = number
@@ -215,22 +212,22 @@ class FoundationStacks:
     def print_foundation_stack_1(self):
         sys.stdout.write("Foundation Stack 1: ")
         self.__stack_plus_1.print_stack()
-        print "Next Card Required: " + self.get_next_card_to_foundation_1()
+        print "Next Card Required: " + self.get_next_card_to_foundation_1() + "\n"
 
     def print_foundation_stack_2(self):
         sys.stdout.write("Foundation Stack 2: ")
         self.__stack_plus_2.print_stack()
-        print "Next Card Required: " + self.get_next_card_to_foundation_2()
+        print "Next Card Required: " + self.get_next_card_to_foundation_2() + "\n"
 
     def print_foundation_stack_3(self):
         sys.stdout.write("Foundation Stack 3: ")
         self.__stack_plus_3.print_stack()
-        print "Next Card Required: " + self.get_next_card_to_foundation_3()
+        print "Next Card Required: " + self.get_next_card_to_foundation_3() + "\n"
 
     def print_foundation_stack_4(self):
         sys.stdout.write("Foundation Stack 4: ")
         self.__stack_plus_4.print_stack()
-        print "Next Card Required: " + self.get_next_card_to_foundation_4()
+        print "Next Card Required: " + self.get_next_card_to_foundation_4() + "\n"
 
     def print_all_foundation_stacks(self):
         self.print_foundation_stack_1()
@@ -323,18 +320,22 @@ class WastePiles:
     def print_waste_pile_1(self):
         sys.stdout.write("Waste Pile 1: ")
         self.__waste_stack_1.print_stack()
+        print
 
     def print_waste_pile_2(self):
         sys.stdout.write("Waste Pile 2: ")
         self.__waste_stack_2.print_stack()
+        print
 
     def print_waste_pile_3(self):
         sys.stdout.write("Waste Pile 3: ")
         self.__waste_stack_3.print_stack()
+        print
 
     def print_waste_pile_4(self):
         sys.stdout.write("Waste Pile 4: ")
         self.__waste_stack_4.print_stack()
+        print
 
     def print_all_waste_piles(self):
         self.print_waste_pile_1()
@@ -380,6 +381,7 @@ class RevealStack:
     def print_revealed_card(self):
         sys.stdout.write("Revealed Card: ")
         self.__reveal_stack.print_stack()
+        print
 
     def is_empty(self):
         return self.__reveal_stack.size() == 0

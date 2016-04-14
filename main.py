@@ -121,6 +121,7 @@ def main():
         waste_piles.print_all_waste_piles()
         reveal_stack.print_revealed_card()
         print "The amount of cards remaining in the deck are: ", shuffled_deck.get_remaining_stack_size()
+        print
         if shuffled_deck.get_remaining_stack_size() == 0 and waste_piles.are_all_empty() and \
                 reveal_stack.is_empty() and foundation_stacks.are_all_foundation_stacks_filled():
             print "\nCongratulations! You won!\n"
