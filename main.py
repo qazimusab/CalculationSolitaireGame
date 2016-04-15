@@ -85,7 +85,7 @@ def main():
             move_is_valid = True
             command = raw_input("\nWhich Waste Pile do you want to move from?\n")
             if command == "W1" or command == "W2" or command == "W3" or command == "W4" or \
-                            command == "w1" or command == "w2" or command == "w3" or command == "w4":
+                    command == "w1" or command == "w2" or command == "w3" or command == "w4":
                 waste_pile_to_move_from = command
                 if waste_pile_to_move_from == "W1" and waste_piles.is_waste_pile_1_empty():
                     move_is_valid = False
@@ -98,7 +98,7 @@ def main():
                 if move_is_valid:
                     command = raw_input("\nWhich Foundation Stack do you want to move this card to?\n")
                     if command == "F1" or command == "F2" or command == "F3" or command == "F4" or \
-                                    command == "f1" or command == "f2" or command == "f3" or command == "f4":
+                            command == "f1" or command == "f2" or command == "f3" or command == "f4":
                         foundation_stack_to_move_to = command
                         if not foundation_stacks.is_valid_move_to_foundation_stack(
                                 waste_piles.peek_at_top_card_from_waste_pile(waste_pile_to_move_from),
