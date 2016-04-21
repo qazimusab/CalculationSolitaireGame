@@ -38,12 +38,16 @@ class Card:
     def __init__(self, suit, number):
         self.__suit = suit
         self.__number = number
+        self.__image_name = number + suit + ".jpg"
 
     def get_suit(self):
         return self.__suit
 
     def get_number(self):
         return self.__number
+
+    def get_image_name(self):
+        return self.__image_name
 
 
 def get_suit(suit_number):
