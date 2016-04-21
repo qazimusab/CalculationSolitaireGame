@@ -87,13 +87,17 @@ def main():
             if command == "W1" or command == "W2" or command == "W3" or command == "W4" or \
                     command == "w1" or command == "w2" or command == "w3" or command == "w4":
                 waste_pile_to_move_from = command
-                if waste_pile_to_move_from == "W1" and waste_piles.is_waste_pile_1_empty():
+                if waste_pile_to_move_from == "W1" and waste_piles.is_waste_pile_1_empty() or \
+                        waste_pile_to_move_from == "w1" and waste_piles.is_waste_pile_1_empty():
                     move_is_valid = False
-                elif waste_pile_to_move_from == "W2" and waste_piles.is_waste_pile_2_empty():
+                elif waste_pile_to_move_from == "W2" and waste_piles.is_waste_pile_2_empty() or \
+                        waste_pile_to_move_from == "w2" and waste_piles.is_waste_pile_1_empty():
                     move_is_valid = False
-                elif waste_pile_to_move_from == "W3" and waste_piles.is_waste_pile_3_empty():
+                elif waste_pile_to_move_from == "W3" and waste_piles.is_waste_pile_3_empty() or \
+                        waste_pile_to_move_from == "w3" and waste_piles.is_waste_pile_1_empty():
                     move_is_valid = False
-                elif waste_pile_to_move_from == "W4" and waste_piles.is_waste_pile_4_empty():
+                elif waste_pile_to_move_from == "W4" and waste_piles.is_waste_pile_4_empty() or \
+                        waste_pile_to_move_from == "w4" and waste_piles.is_waste_pile_1_empty():
                     move_is_valid = False
                 if move_is_valid:
                     command = raw_input("\nWhich Foundation Stack do you want to move this card to?\n")
